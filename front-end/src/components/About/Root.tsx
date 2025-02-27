@@ -7,7 +7,9 @@ interface RootProps {
 export function Root({ children }: RootProps) {
   return (
     <>
-      <div className="w-full h-screen bg-[#0D121E] text-white">{children}</div>
+      <section className="w-full h-screen bg-[#0D121E] text-white flex items-center justify-center">
+        {children}
+      </section>
     </>
   );
 }

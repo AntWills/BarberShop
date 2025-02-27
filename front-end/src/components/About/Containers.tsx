@@ -7,7 +7,7 @@ interface ContainersProps {
 export function Containers({ children }: ContainersProps) {
   return (
     <>
-      <div className="flex justify-between">{children}</div>
+      <div className="flex justify-between m-2">{children}</div>
     </>
   );
 }
