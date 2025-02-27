@@ -7,7 +7,7 @@ interface CaptionProps {
 export function Caption({ children }: CaptionProps) {
   return (
     <>
-      <div className="text-sm text-center">{children}</div>
+      <div className="text-sm">{children}</div>
     </>
   );
 }

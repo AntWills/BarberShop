@@ -7,7 +7,7 @@ interface TitleProps {
 export function Title({ children }: TitleProps) {
   return (
     <>
-      <div className="text-2xl text-center">{children}</div>
+      <div className="text-2xl">{children}</div>
     </>
   );
 }

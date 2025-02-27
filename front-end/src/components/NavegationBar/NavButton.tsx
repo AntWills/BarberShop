@@ -1,10 +1,10 @@
 import { ReactNode, ButtonHTMLAttributes } from "react";
 
-interface ActionButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface NavButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
-export function ActionButton({ children, ...rest }: ActionButtonProps) {
+export function NavButton({ children, ...rest }: NavButtonProps) {
   return (
     <button className="text-white mx-1.5" {...rest}>
       {children}

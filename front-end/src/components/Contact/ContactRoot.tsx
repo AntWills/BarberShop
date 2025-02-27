@@ -12,7 +12,8 @@ export function ContactRoot({ children }: ContactRootProps) {
         className="bg-repeat bg-cover bg-bottom w-full h-screen flex justify-center items-center text-white"
         style={{ backgroundImage: `url(${bgContact})` }}
       >
-        <div>{children}</div>
+        {/* <div>{children}</div> */}
+        {children}
         {/* <div className=""></div> */}
       </div>
     </>
