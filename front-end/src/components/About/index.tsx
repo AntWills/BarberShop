@@ -4,6 +4,8 @@ import { Detail } from "./Detail";
 import { Info } from "./Info";
 import { Root } from "./Root";
 import { Title } from "./Title";
+import { ContainerImg } from "./ContainerImgs";
+import { Img } from "./Img";
 
 export const About = {
   Root,
@@ -12,4 +14,6 @@ export const About = {
   Title,
   Detail,
   Info,
+  ContainerImg,
+  Img,
 };

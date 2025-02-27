@@ -2,6 +2,9 @@ import { Contact } from "../components/Contact/index";
 import { NavegationBar } from "../components/NavegationBar/index";
 import { About } from "../components/About/index";
 import Icon from "../assets/baberShop-Icon.png";
+import Reta10 from "../assets/Rectangle10.png";
+import Reta11 from "../assets/Rectangle11.png";
+import Reta12 from "../assets/Rectangle12.png";
 
 function Home() {
   return (
@@ -38,8 +41,26 @@ function Home() {
 
         <About.Root>
           <About.Containers>
-            <About.Container>Teste</About.Container>
-            <About.Container>
+            <About.Container className="flex h-full flex-col justify-center content-center  w-2/3">
+              <About.ContainerImg>
+                <img
+                  src={Reta10}
+                  alt=""
+                  className="absolute top-30 left-1/4 object-cover z-30"
+                />
+                <img
+                  src={Reta11}
+                  alt=""
+                  className="absolute bottom-20 right-1/4 object-cover z-20"
+                />
+                <img
+                  src={Reta12}
+                  alt=""
+                  className="absolute bottom-25 left-10 object-cover z-10"
+                />
+              </About.ContainerImg>
+            </About.Container>
+            <About.Container className="flex h-full flex-col justify-center content-center  w-1/3">
               <About.Title>Sobre</About.Title>
               <About.Detail>
                 A BarberShop é um espaço dedicado ao cuidado masculino, onde a

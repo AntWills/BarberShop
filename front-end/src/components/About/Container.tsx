@@ -2,14 +2,13 @@ import { ReactNode } from "react";
 
 interface ContainerProps {
   children: ReactNode;
+  className: string;
 }
 
-export function Container({ children }: ContainerProps) {
+export function Container({ children, className }: ContainerProps) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-1/2">
-        {children}
-      </div>
+      <div className={className}>{children}</div>
     </>
   );
 }
