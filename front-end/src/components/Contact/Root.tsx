@@ -5,17 +5,15 @@ interface ContactRootProps {
   children: ReactNode;
 }
 
-export function ContactRoot({ children }: ContactRootProps) {
+export function Root({ children }: ContactRootProps) {
   return (
     <>
-      <div
+      <section
         className="bg-repeat bg-cover bg-bottom w-full h-screen flex justify-center items-center text-white"
         style={{ backgroundImage: `url(${bgContact})` }}
       >
-        {/* <div>{children}</div> */}
         {children}
-        {/* <div className=""></div> */}
-      </div>
+      </section>
     </>
   );
 }
