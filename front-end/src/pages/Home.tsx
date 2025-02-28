@@ -5,18 +5,37 @@ import Icon from "../assets/baberShop-Icon.png";
 import Reta10 from "../assets/Rectangle10.png";
 import Reta11 from "../assets/Rectangle11.png";
 import Reta12 from "../assets/Rectangle12.png";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    const handleHashChange = () => {
+      const { hash } = window.location;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  const navigateTo = (idSection: string) => {
+    window.location.hash = idSection;
+  };
   return (
     <>
       {/* <div className=""> */}
       <NavegationBar.Root>
         <NavegationBar.Containers>
           <NavegationBar.Container>
-            <NavegationBar.Button>
+            <NavegationBar.Button onClick={() => navigateTo("contact")}>
               <NavegationBar.Icon src={Icon} className="w-10 h-auto" />
             </NavegationBar.Button>
-            <NavegationBar.Button onClick={() => console.log("Olá")}>
+            <NavegationBar.Button onClick={() => navigateTo("about")}>
               Sobre
             </NavegationBar.Button>
             <NavegationBar.Button>Serviços</NavegationBar.Button>
@@ -29,7 +48,7 @@ function Home() {
         </NavegationBar.Containers>
       </NavegationBar.Root>
 
-      <Contact.Root>
+      <Contact.Root id="contact">
         <Contact.Container>
           <Contact.Title>
             ESTILO É UM REFLEXO DA SUA ATITUDE E SUA PERSONALIDADE
@@ -41,7 +60,7 @@ function Home() {
         </Contact.Container>
       </Contact.Root>
 
-      <About.Root>
+      <About.Root id="about">
         <About.Containers>
           <About.Container className="flex h-full flex-col justify-center content-center  w-2/3">
             <About.ContainerImg>
