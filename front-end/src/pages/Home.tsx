@@ -1,6 +1,7 @@
-import { Contact } from "../components/Contact/index";
-import { NavegationBar } from "../components/NavegationBar/index";
-import { About } from "../components/About/index";
+import { NavegationBar } from "../components/NavegationBar";
+import { Contact } from "../components/Contact";
+import { About } from "../components/About";
+import { Service } from "../components/Service";
 import Icon from "../assets/baberShop-Icon.png";
 import Reta10 from "../assets/Rectangle10.png";
 import Reta11 from "../assets/Rectangle11.png";
@@ -93,6 +94,17 @@ function Home() {
           </About.Container>
         </About.Containers>
       </About.Root>
+
+      <Service.Root id="service">
+        <Service.Container className="">
+          <Service.Title>Serciços</Service.Title>
+          <Service.Detail>
+            A BarberShop é um verdadeiro refúgio para o homem moderno,
+            oferecendo uma gama completa de serviços para cuidar da aparência e
+            do bem-estar.
+          </Service.Detail>
+        </Service.Container>
+      </Service.Root>
       {/* </div> */}
     </>
   );
