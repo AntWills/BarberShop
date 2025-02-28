@@ -1,5 +1,5 @@
 import { Contact } from "../components/Contact/index";
-import { NavegationBar } from "../components/NavBar/index";
+import { NavegationBar } from "../components/NavegationBar/index";
 import { About } from "../components/About/index";
 import Icon from "../assets/baberShop-Icon.png";
 import Reta10 from "../assets/Rectangle10.png";
@@ -13,7 +13,7 @@ function Home() {
         <NavegationBar.Root>
           <NavegationBar.Containers>
             <NavegationBar.Container>
-              <NavegationBar.Icon src={Icon} />
+              <NavegationBar.Icon src={Icon} className="w-10 h-auto" />
               <NavegationBar.Button onClick={() => console.log("Olá")}>
                 Sobre
               </NavegationBar.Button>
