@@ -6,6 +6,9 @@ import Icon from "../assets/baberShop-Icon.png";
 import Reta10 from "../assets/Rectangle10.png";
 import Reta11 from "../assets/Rectangle11.png";
 import Reta12 from "../assets/Rectangle12.png";
+import serviceImg1 from "../assets/Servico1.png";
+import serviceImg2 from "../assets/Servico2.png";
+import serviceImg3 from "../assets/Servico3.png";
 import { useEffect } from "react";
 
 function Home() {
@@ -98,7 +101,7 @@ function Home() {
       </About.Root>
 
       <Service.Root id="service">
-        <Service.Container className="p-32">
+        <Service.Container className="p-32 h-1/2">
           <Service.Title>Serciços</Service.Title>
           <Service.Detail>
             A BarberShop é um verdadeiro refúgio para o homem moderno,
@@ -106,7 +109,32 @@ function Home() {
             do bem-estar.
           </Service.Detail>
         </Service.Container>
+        <Service.Container className="h-1/2 m-2 p-4 flex justify-center items-center">
+          <Service.Card>
+            <Service.Img src={serviceImg1} className="" />
+            <Service.Container className="flex justify-between p-4">
+              <p>Serviço 1</p>
+              <p>R$ 55,00</p>
+            </Service.Container>
+          </Service.Card>
+          <Service.Card>
+            <Service.Img src={serviceImg2} className="h-9/10 w-auto" />
+            <Service.Container className="flex justify-between p-4 1/10">
+              <div>Serviço 2</div>
+              <div>R$ 70,00</div>
+            </Service.Container>
+          </Service.Card>
+          <Service.Card>
+            <Service.Img src={serviceImg3} className="" />
+            <Service.Container className="flex justify-between p-4">
+              <p>Serviço 3</p>
+              <p>R$ 80,00</p>
+            </Service.Container>
+          </Service.Card>
+        </Service.Container>
       </Service.Root>
+
+      <div className="h-20">Aqui</div>
       {/* </div> */}
     </>
   );
