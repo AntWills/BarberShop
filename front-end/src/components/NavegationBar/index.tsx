@@ -1,12 +1,12 @@
-import { NavegationRoot } from "./NavegationRoot";
-import { NavButton } from "./NavButton";
+import { Root } from "./Root";
+import { Button } from "./Button";
 import { Container } from "./Container";
 import { Containers } from "./Containers";
 import { Icon } from "./Icon";
 
 export const NavegationBar = {
-  Root: NavegationRoot,
-  NavButton,
+  Root,
+  Button,
   Container,
   Containers,
   Icon,

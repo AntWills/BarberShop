@@ -1,5 +1,5 @@
 import { Contact } from "../components/Contact/index";
-import { NavegationBar } from "../components/NavegationBar/index";
+import { NavegationBar } from "../components/NavBar/index";
 import { About } from "../components/About/index";
 import Icon from "../assets/baberShop-Icon.png";
 import Reta10 from "../assets/Rectangle10.png";
@@ -14,15 +14,15 @@ function Home() {
           <NavegationBar.Containers>
             <NavegationBar.Container>
               <NavegationBar.Icon src={Icon} />
-              <NavegationBar.NavButton onClick={() => console.log("Olá")}>
+              <NavegationBar.Button onClick={() => console.log("Olá")}>
                 Sobre
-              </NavegationBar.NavButton>
-              <NavegationBar.NavButton>Serviços</NavegationBar.NavButton>
-              <NavegationBar.NavButton>Quem Somos</NavegationBar.NavButton>
-              <NavegationBar.NavButton>Contatos</NavegationBar.NavButton>
+              </NavegationBar.Button>
+              <NavegationBar.Button>Serviços</NavegationBar.Button>
+              <NavegationBar.Button>Quem Somos</NavegationBar.Button>
+              <NavegationBar.Button>Contatos</NavegationBar.Button>
             </NavegationBar.Container>
             <NavegationBar.Container>
-              <NavegationBar.NavButton>Agendar</NavegationBar.NavButton>
+              <NavegationBar.Button>Agendar</NavegationBar.Button>
             </NavegationBar.Container>
           </NavegationBar.Containers>
         </NavegationBar.Root>
