@@ -7,7 +7,7 @@ interface DetailProps {
 export function Detail({ children }: DetailProps) {
   return (
     <>
-      <div className="text-sm text-justify text-normal">{children}</div>
+      <div className="text-2xl text-normal text-center">{children}</div>
     </>
   );
 }

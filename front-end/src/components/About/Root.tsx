@@ -10,7 +10,7 @@ export function Root({ children, id }: RootProps) {
     <>
       <section
         id={id}
-        className="w-full h-screen bg-[#0D121E] text-white flex items-center justify-center"
+        className="pointer-events-none w-full h-screen bg-[#0D121E] text-white flex items-center justify-center"
       >
         {children}
       </section>

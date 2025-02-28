@@ -39,7 +39,9 @@ function Home() {
             <NavegationBar.Button onClick={() => navigateTo("about")}>
               Sobre
             </NavegationBar.Button>
-            <NavegationBar.Button>Serviços</NavegationBar.Button>
+            <NavegationBar.Button onClick={() => navigateTo("service")}>
+              Serviços
+            </NavegationBar.Button>
             <NavegationBar.Button>Quem Somos</NavegationBar.Button>
             <NavegationBar.Button>Contatos</NavegationBar.Button>
           </NavegationBar.Container>
@@ -96,7 +98,7 @@ function Home() {
       </About.Root>
 
       <Service.Root id="service">
-        <Service.Container className="">
+        <Service.Container className="p-32">
           <Service.Title>Serciços</Service.Title>
           <Service.Detail>
             A BarberShop é um verdadeiro refúgio para o homem moderno,
