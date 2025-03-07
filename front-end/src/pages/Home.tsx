@@ -59,9 +59,9 @@ function Home() {
           <Contact.Title>
             ESTILO É UM REFLEXO DA SUA ATITUDE E SUA PERSONALIDADE
           </Contact.Title>
-          <Contact.Caption>
+          <Contact.Details>
             Horário de funcionamento das 08:00 às 19:00
-          </Contact.Caption>
+          </Contact.Details>
           <Contact.ActionButton>Agendar</Contact.ActionButton>
         </Contact.Container>
       </Contact.Root>
