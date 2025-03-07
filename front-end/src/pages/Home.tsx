@@ -101,7 +101,7 @@ function Home() {
       </About.Root>
 
       <Service.Root id="service">
-        <Service.Container className="p-32 h-1/2">
+        <Service.Container className="h-1/2 p-32">
           <Service.Title>Serciços</Service.Title>
           <Service.Detail>
             A BarberShop é um verdadeiro refúgio para o homem moderno,
@@ -109,26 +109,37 @@ function Home() {
             do bem-estar.
           </Service.Detail>
         </Service.Container>
-        <Service.Container className="h-1/2 m-2 p-4 flex justify-center items-center">
+        <Service.Container className="h-1/2 flex">
           <Service.Card>
-            <Service.Img src={serviceImg1} className="" />
+            <Service.Img
+              src={serviceImg1}
+              className="w-72 h-auto object-cover"
+            />
             <Service.Container className="flex justify-between p-4">
               <p>Serviço 1</p>
               <p>R$ 55,00</p>
             </Service.Container>
           </Service.Card>
+
           <Service.Card>
-            <Service.Img src={serviceImg2} className="h-9/10 w-auto" />
-            <Service.Container className="flex justify-between p-4 1/10">
-              <div>Serviço 2</div>
-              <div>R$ 70,00</div>
+            <Service.Img
+              src={serviceImg3}
+              className="w-72 h-auto object-cover"
+            />
+            <Service.Container className="flex justify-between p-4">
+              <p>Serviço 1</p>
+              <p>R$ 75,00</p>
             </Service.Container>
           </Service.Card>
+
           <Service.Card>
-            <Service.Img src={serviceImg3} className="" />
+            <Service.Img
+              src={serviceImg2}
+              className="w-72 h-auto object-cover"
+            />
             <Service.Container className="flex justify-between p-4">
-              <p>Serviço 3</p>
-              <p>R$ 80,00</p>
+              <p>Serviço 1</p>
+              <p>R$ 90,00</p>
             </Service.Container>
           </Service.Card>
         </Service.Container>
