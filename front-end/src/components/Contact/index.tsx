@@ -1,17 +1,16 @@
 import { Root } from "./Root";
-// import { Title } from "./Title";
-// import { Caption } from "./Caption";
-// import { Container } from "./Container";
 import { Container } from "../Generic/Container";
-import { ActionButton } from "./ActionButton";
+import { Title } from "../Generic/Title";
+import { Text } from "../Generic/Text";
+import { ActionButton } from "../Generic/ActionButton";
 
 export const Contact = {
   Root,
-  Title: (props: React.ComponentProps<typeof Container>) => (
-    <Container {...props} className="text-2xl" />
+  Title: (props: React.ComponentProps<typeof Title>) => (
+    <Container {...props} className="text-3xl" />
   ),
-  Details: (props: React.ComponentProps<typeof Container>) => (
-    <Container {...props} className="text-sm" />
+  Details: (props: React.ComponentProps<typeof Text>) => (
+    <Container {...props} className="text-2xl" />
   ),
   Container: (props: React.ComponentProps<typeof Container>) => (
     <Container
@@ -19,5 +18,7 @@ export const Contact = {
       className="flex flex-col items-center justify-center text-center"
     ></Container>
   ),
-  ActionButton,
+  ActionButton: (props: React.ComponentProps<typeof ActionButton>) => (
+    <ActionButton {...props} className="mx-1.5 text-2xl" />
+  ),
 };

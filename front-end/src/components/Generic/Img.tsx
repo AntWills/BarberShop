@@ -1,6 +1,6 @@
 interface ImgProps {
   src: string;
-  className: string;
+  className?: string;
 }
 
 export function Img({ src, className }: ImgProps) {

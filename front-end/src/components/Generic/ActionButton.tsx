@@ -2,11 +2,16 @@ import { ReactNode, ButtonHTMLAttributes } from "react";
 
 interface ActionButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
+  className?: string;
 }
 
-export function ActionButton({ children, ...rest }: ActionButtonProps) {
+export function ActionButton({
+  className = "",
+  children,
+  ...rest
+}: ActionButtonProps) {
   return (
-    <button className="mx-1.5" {...rest}>
+    <button className={className} {...rest}>
       {children}
     </button>
   );

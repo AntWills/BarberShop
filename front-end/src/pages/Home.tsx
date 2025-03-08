@@ -12,6 +12,23 @@ import serviceImg3 from "../assets/Servico3.png";
 import { useEffect } from "react";
 
 function Home() {
+  const listService = [
+    {
+      srcImg: serviceImg1,
+      type: "serviço 1",
+      cost: "R$ 55,00",
+    },
+    {
+      srcImg: serviceImg3,
+      type: "serviço 2",
+      cost: "R$ 70,00",
+    },
+    {
+      srcImg: serviceImg2,
+      type: "serviço 3",
+      cost: "R$ 90,00",
+    },
+  ];
   useEffect(() => {
     const handleHashChange = () => {
       const { hash } = window.location;
@@ -87,7 +104,7 @@ function Home() {
               />
             </About.ContainerImg>
           </About.Container>
-          <About.Container className="flex h-full flex-col justify-center content-center  w-1/3">
+          <About.Container className="flex h-full flex-col justify-center content-center p-6 w-1/3">
             <About.Title>Sobre</About.Title>
             <About.Detail>
               A BarberShop é um espaço dedicado ao cuidado masculino, onde a
@@ -110,38 +127,15 @@ function Home() {
           </Service.Detail>
         </Service.Container>
         <Service.Container className="h-1/2 flex">
-          <Service.Card>
-            <Service.Img
-              src={serviceImg1}
-              className="w-72 h-auto object-cover"
-            />
-            <Service.Container className="flex justify-between p-4">
-              <p>Serviço 1</p>
-              <p>R$ 55,00</p>
-            </Service.Container>
-          </Service.Card>
-
-          <Service.Card>
-            <Service.Img
-              src={serviceImg3}
-              className="w-72 h-auto object-cover"
-            />
-            <Service.Container className="flex justify-between p-4">
-              <p>Serviço 1</p>
-              <p>R$ 75,00</p>
-            </Service.Container>
-          </Service.Card>
-
-          <Service.Card>
-            <Service.Img
-              src={serviceImg2}
-              className="w-72 h-auto object-cover"
-            />
-            <Service.Container className="flex justify-between p-4">
-              <p>Serviço 1</p>
-              <p>R$ 90,00</p>
-            </Service.Container>
-          </Service.Card>
+          {listService.map((service, index) => (
+            <Service.Card.Root key={index}>
+              <Service.Card.Img src={service.srcImg} />
+              <Service.Card.Description>
+                <Service.Card.Type children={service.type} />
+                <Service.Card.Cost children={service.cost} />
+              </Service.Card.Description>
+            </Service.Card.Root>
+          ))}
         </Service.Container>
       </Service.Root>
 

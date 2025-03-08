@@ -1,13 +1,13 @@
 import { Root } from "./Root";
-import { Button } from "./Button";
-// import { Container } from "./Container";
 import { Container } from "../Generic/Container";
-// import { Containers } from "./Containers";
-import { Icon } from "../Generic/Icon";
+import { ActionButton } from "../Generic/ActionButton";
+import { Img } from "../Generic/Img";
 
 export const NavegationBar = {
   Root,
-  Button,
+  Button: (props: React.ComponentProps<typeof ActionButton>) => (
+    <ActionButton {...props} className="text-white mx-1.5" />
+  ),
   // Container,
   Container: (props: React.ComponentProps<typeof Container>) => (
     <Container {...props} className="flex m-2.5" />
@@ -16,5 +16,5 @@ export const NavegationBar = {
     <Container {...props} className="flex justify-between" />
   ),
   // Containers,
-  Icon,
+  Icon: Img,
 };
