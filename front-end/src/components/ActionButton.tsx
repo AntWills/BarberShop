@@ -6,7 +6,7 @@ interface ActionButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export function ActionButton({
-  className = "",
+  className = "mx-1.5 text-black  bg-[#F0B35B] px-10 rounded-xl",
   children,
   ...rest
 }: ActionButtonProps) {

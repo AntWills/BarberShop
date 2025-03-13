@@ -1,10 +1,8 @@
-import { Container } from "../Generic/Container";
-import { Root } from "./Root";
-import { Img } from "../Generic/Img";
-import { Title } from "../Generic/Title";
-import { Text } from "../Generic/Text";
+import { Container } from "./Container";
+import { Img } from "./Img";
+import { Text } from "./Text";
 
-const Card = {
+export const Card = {
   Root: (props: React.ComponentProps<typeof Container>) => (
     <Container
       {...props}
@@ -26,16 +24,4 @@ const Card = {
   Type: (props: React.ComponentProps<typeof Text>) => (
     <Text {...props} className="" />
   ),
-};
-
-export const Service = {
-  Root,
-  Title: (props: React.ComponentProps<typeof Title>) => (
-    <Title {...props} className="text-6xl text-bold text-center" />
-  ),
-  Detail: (props: React.ComponentProps<typeof Text>) => (
-    <Text {...props} className="text-2xl text-normal text-center" />
-  ),
-  Container,
-  Card,
 };
