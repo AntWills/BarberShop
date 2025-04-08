@@ -1,13 +1,6 @@
-import { Contact } from "./sections/Contact";
-import { About } from "./sections/About";
-import { Service } from "./sections/Service";
-import IconImg from "../../assets/baberShop-Icon.png";
-import Reta10 from "../../assets/Rectangle10.png";
-import Reta11 from "../../assets/Rectangle11.png";
-import Reta12 from "../../assets/Rectangle12.png";
-import serviceImg1 from "../../assets/Servico1.png";
-import serviceImg2 from "../../assets/Servico2.png";
-import serviceImg3 from "../../assets/Servico3.png";
+import Contact from "./Components/Contact";
+import { About } from "./Components/About";
+import { Service } from "./Components/Service";
 import { Header } from "../../layout/HeaderBar";
 import { Container } from "../../components/Container";
 import { HyperLink } from "../../components/HyperLink";
@@ -23,17 +16,17 @@ function Home() {
 
   const listService = [
     {
-      srcImg: serviceImg1,
+      srcImg: "/public/img/Servico1.png",
       type: "serviço 1",
       cost: "R$ 55,00",
     },
     {
-      srcImg: serviceImg3,
+      srcImg: "/public/img/Servico2.png",
       type: "serviço 2",
       cost: "R$ 70,00",
     },
     {
-      srcImg: serviceImg2,
+      srcImg: "/public/img/Servico3.png",
       type: "serviço 3",
       cost: "R$ 90,00",
     },
@@ -45,7 +38,7 @@ function Home() {
         <Header>
           <Container className="flex items-center justify-center">
             <HyperLink href="#contact">
-              <Icon src={IconImg} />
+              <Icon src={"/public/img/baberShop-Icon.png"} />
             </HyperLink>
             <HyperLink href="#about">Sobre</HyperLink>
             <HyperLink href="#service">Serviços</HyperLink>
@@ -53,7 +46,7 @@ function Home() {
           <ActionButton onClick={openModal}>Agendar</ActionButton>
         </Header>
 
-        <Contact.Root id="contact">
+        <Contact id="contact">
           <Contact.Container>
             <Title>
               ESTILO É UM REFLEXO DA SUA ATITUDE E SUA PERSONALIDADE
@@ -61,30 +54,14 @@ function Home() {
             <Text>Horário de funcionamento das 08:00 às 19:00</Text>
             <ActionButton onClick={openModal}>Agendar</ActionButton>
           </Contact.Container>
-        </Contact.Root>
+        </Contact>
 
         <Modal open={open} closeModal={closeModal} />
 
         <About.Root id="about">
           <About.Containers>
             <About.Container className="flex h-full flex-col justify-center content-center  w-2/3">
-              <About.ContainerImg>
-                <img
-                  src={Reta10}
-                  alt=""
-                  className="absolute top-30 left-1/4 object-cover z-30"
-                />
-                <img
-                  src={Reta11}
-                  alt=""
-                  className="absolute bottom-20 right-1/4 object-cover z-20"
-                />
-                <img
-                  src={Reta12}
-                  alt=""
-                  className="absolute bottom-25 left-10 object-cover z-10"
-                />
-              </About.ContainerImg>
+              <About.Img src={"public/img/RectangleAll.png"} />
             </About.Container>
             <About.Container className="flex h-full flex-col justify-center content-center p-6 w-1/3">
               <About.Title>Sobre</About.Title>

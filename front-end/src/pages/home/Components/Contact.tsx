@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
-import { Container } from "../../../components/Container";
+import { Container as GenContainer } from "../../../components/Container";
 
-interface ContactRootProps {
+interface ContactProps {
   children: ReactNode;
   id: string;
 }
 
-function Root({ children, id }: ContactRootProps) {
+export default function Contact({ children, id }: ContactProps) {
   return (
     <>
       <section
@@ -19,12 +19,13 @@ function Root({ children, id }: ContactRootProps) {
   );
 }
 
-export const Contact = {
-  Root,
-  Container: (props: React.ComponentProps<typeof Container>) => (
-    <Container
+Contact.Container = function Container(
+  props: React.ComponentProps<typeof GenContainer>
+) {
+  return (
+    <GenContainer
       {...props}
       className="flex flex-col items-center justify-center text-center"
     />
-  ),
+  );
 };
