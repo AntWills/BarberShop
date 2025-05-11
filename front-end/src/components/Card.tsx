@@ -22,6 +22,6 @@ export const Card = {
     <Text {...props} className="text-white bg-black p-0.5 px-1 rounded-md" />
   ),
   Type: (props: React.ComponentProps<typeof Text>) => (
-    <Text {...props} className="" />
+    <Text {...props} className="font-bold" />
   ),
 };

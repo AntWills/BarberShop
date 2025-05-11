@@ -6,7 +6,7 @@ interface TextProps {
 }
 
 export function Text({
-  className = "text-[1rem] font-thin",
+  className = "text-[1rem] font-light",
   children,
 }: TextProps) {
   return (

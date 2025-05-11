@@ -33,7 +33,10 @@ export const About = {
     <Container {...props} className="text-3xl text-bold my-1" />
   ),
   Text: (props: React.ComponentProps<typeof Text>) => (
-    <Container {...props} className="font-thin text-[1rem] text-justify my-1" />
+    <Container
+      {...props}
+      className="font-light text-[1rem] text-justify my-1"
+    />
   ),
   Info: (props: React.ComponentProps<typeof Text>) => (
     <Container {...props} className="font-bold text-[1rem] text-bold my-1" />
