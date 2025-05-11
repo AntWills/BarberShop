@@ -16,17 +16,17 @@ function Home() {
 
   const listService = [
     {
-      srcImg: "/public/img/Servico1.png",
+      srcImg: "/img/Servico1.png",
       type: "serviço 1",
       cost: "R$ 55,00",
     },
     {
-      srcImg: "/public/img/Servico2.png",
+      srcImg: "/img/Servico2.png",
       type: "serviço 2",
       cost: "R$ 70,00",
     },
     {
-      srcImg: "/public/img/Servico3.png",
+      srcImg: "/img/Servico3.png",
       type: "serviço 3",
       cost: "R$ 90,00",
     },
@@ -38,7 +38,7 @@ function Home() {
         <Header>
           <Container className="flex items-center justify-center">
             <HyperLink href="#contact">
-              <Icon src={"/public/img/baberShop-Icon.png"} />
+              <Icon src={"/img/baberShop-Icon.png"} />
             </HyperLink>
             <HyperLink href="#about">Sobre</HyperLink>
             <HyperLink href="#service">Serviços</HyperLink>
@@ -61,7 +61,7 @@ function Home() {
         <About.Root id="about">
           <About.Containers>
             <About.Container className="flex h-full flex-col justify-center content-center  w-2/3">
-              <About.Img src={"public/img/RectangleAll.png"} />
+              <About.Img src={"/img/RectangleAll.png"} />
             </About.Container>
             <About.Container className="flex h-full flex-col justify-center content-center p-6 w-1/3">
               <About.Title>Sobre</About.Title>

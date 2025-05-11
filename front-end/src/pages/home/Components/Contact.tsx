@@ -11,7 +11,7 @@ export default function Contact({ children, id }: ContactProps) {
     <>
       <section
         id={id}
-        className="bg-[url(/public/img/bg-contact.png)] bg-repeat bg-cover bg-bottom w-full h-screen flex justify-center items-center text-white"
+        className="bg-[url(/img/bg-contact.png)] bg-repeat bg-cover bg-bottom w-full h-screen flex justify-center items-center text-white"
       >
         {children}
       </section>
