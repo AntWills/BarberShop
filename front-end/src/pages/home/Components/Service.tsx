@@ -14,7 +14,7 @@ export function Root({ children, id }: RootProps) {
     <>
       <section
         id={id}
-        className="bg-white text-black w-full h-screen flex justify-center items-center flex-col"
+        className="bg-white text-black w-full max-h-screen flex justify-center items-center flex-col"
       >
         {children}
       </section>
@@ -25,10 +25,10 @@ export function Root({ children, id }: RootProps) {
 export const Service = {
   Root,
   Title: (props: React.ComponentProps<typeof Title>) => (
-    <Title {...props} className="text-[3rem] font-semibold" />
+    <Title {...props} className="text-3xl font-semibold" />
   ),
   Detail: (props: React.ComponentProps<typeof Text>) => (
-    <Text {...props} className="text-[1.5rem] font-light text-center" />
+    <Text {...props} className="text-xl font-light text-center" />
   ),
   Container,
   Card,

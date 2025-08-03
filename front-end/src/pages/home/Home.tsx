@@ -79,15 +79,17 @@ function Home() {
         </About.Root>
 
         <Service.Root id="service">
-          <Service.Container className="h-1/2 p-32 text-center items-center">
-            <Service.Title>Serciços</Service.Title>
-            <Service.Detail>
-              A BarberShop é um verdadeiro refúgio para o homem moderno,
-              oferecendo uma gama completa de serviços para cuidar da aparência
-              e do bem-estar.
-            </Service.Detail>
+          <Service.Container className="text-center items-center">
+            <Service.Container className="py-9 px-9">
+              <Service.Title>Serciços</Service.Title>
+              <Service.Detail>
+                A BarberShop é um verdadeiro refúgio para o homem moderno,
+                oferecendo uma gama completa de serviços para cuidar da
+                aparência e do bem-estar.
+              </Service.Detail>
+            </Service.Container>
           </Service.Container>
-          <Service.Container className="h-1/2 flex">
+          <Service.Container className="flex">
             {listService.map((service, index) => (
               <Service.Card.Root key={index}>
                 <Service.Card.Img src={service.srcImg} />

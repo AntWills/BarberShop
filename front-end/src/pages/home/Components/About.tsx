@@ -30,16 +30,13 @@ export const About = {
     <Container {...props} className="flex h-full justify-items-center m-2" />
   ),
   Title: (props: React.ComponentProps<typeof SubTitle>) => (
-    <Container {...props} className="text-3xl text-bold my-1" />
+    <Container {...props} className="text-3xl font-semibold my-1" />
   ),
   Text: (props: React.ComponentProps<typeof Text>) => (
-    <Container
-      {...props}
-      className="font-light text-[1rem] text-justify my-1"
-    />
+    <Container {...props} className="font-light text-justify my-1" />
   ),
   Info: (props: React.ComponentProps<typeof Text>) => (
-    <Container {...props} className="font-bold text-[1rem] text-bold my-1" />
+    <Container {...props} className="font-bold text-bold my-1" />
   ),
   ContainerImg: (props: React.ComponentProps<typeof Container>) => (
     <Container {...props} className="relative w-full h-full" />
