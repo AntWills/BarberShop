@@ -1,22 +1,20 @@
 from rest_framework.response import Response
 from rest_framework.request import Request
-from rest_framework.decorators import APIView
+from rest_framework.decorators import api_view, APIView
 from rest_framework import status
 from .models import User
 from .serializers import UserSerializer
 
-# Create your views here.
 
-
-class UserViweCrud(APIView):
-    def get(self, request: Request, format=None):
+class UserView(APIView):
+    def get(self, request: Request):
         users = User.objects.all()
 
         serializer = UserSerializer(users, many=True)
 
         return Response(serializer.data)
 
-    def post(self, request: Request, format=None):
+    def post(self, request: Request):
         serializer = UserSerializer(data=request.data)
 
         if not serializer.is_valid():
@@ -29,27 +27,14 @@ class UserViweCrud(APIView):
             )
 
         user = serializer.save()
-        # Serialize o user antes de retornar
+
         return Response(
             UserSerializer(user).data,
             status=status.HTTP_201_CREATED
         )
-    pass
 
 
-# @api_view(['GET'])
-# def getData(request: Request):
-#     name = request.query_params.get("name")
-
-#     if not name:
-#         return Response("Nome não enviado")
-#     data = {
-#         "name": name
-#     }
-#     return Response(data)
-
-
-# @api_view(["POST"])
-# def createData(request: Request):
-#     print(request.data)
-#     return Response("OK")
+class UserDetailView(APIView):
+    def get(self, request, user_id: int):
+        user = User.objects.get(pk=user_id)
+        return Response(UserSerializer(user).data)
