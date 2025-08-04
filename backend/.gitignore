@@ -1,0 +1,20 @@
+# Arquivos e pastas do Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Banco de dados do Django
+db.sqlite3
+
+# Arquivos de IDEs (opcional, mas recomendado)
+.vscode/
+.idea/
+
+# Arquivos de log e outros
+*.log
+
+# Arquivos gerados por migrações que não são código
+# As migrações em si devem ser versionadas, mas os arquivos de cache não.
+*/migrations/__pycache__/
